@@ -12,7 +12,7 @@ function DogPics() {
       .then((data) => {
         console.log("setState");
         setImages(data.message);
-      });
+      },[]);
   });
 
   console.log("render");
@@ -20,7 +20,7 @@ function DogPics() {
   return (
     <div>
       {images.map((image) => (
-        <img src={image} key={image} />
+        <img src={image} key={image} alt="img" />
       ))}
     </div>
   );
